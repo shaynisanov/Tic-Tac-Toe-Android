@@ -34,7 +34,7 @@
 
         <!-- Create 9 Buttons for the Tic Tac Toe Cells -->
         <Button
-            android:id="@+id/button_1"
+            android:id="@+id/button_0_0"
             style="@style/TicTacToeButton"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="4dp"
@@ -43,7 +43,7 @@
             app:cornerRadius="0dp" />
 
         <Button
-            android:id="@+id/button_2"
+            android:id="@+id/button_0_1"
             style="@style/TicTacToeButton"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="4dp"
@@ -52,7 +52,7 @@
             app:cornerRadius="0dp"/>
 
         <Button
-            android:id="@+id/button_3"
+            android:id="@+id/button_0_2"
             style="@style/TicTacToeButton"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="4dp"
@@ -61,7 +61,7 @@
             app:cornerRadius="0dp"/>
 
         <Button
-            android:id="@+id/button_4"
+            android:id="@+id/button_1_0"
             style="@style/TicTacToeButton"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="2dp"
@@ -70,7 +70,7 @@
             app:cornerRadius="0dp"/>
 
         <Button
-            android:id="@+id/button_5"
+            android:id="@+id/button_1_1"
             style="@style/TicTacToeButton"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="2dp"
@@ -79,7 +79,7 @@
             app:cornerRadius="0dp"/>
 
         <Button
-            android:id="@+id/button_6"
+            android:id="@+id/button_1_2"
             style="@style/TicTacToeButton"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="2dp"
@@ -88,7 +88,7 @@
             app:cornerRadius="0dp"/>
 
         <Button
-            android:id="@+id/button_7"
+            android:id="@+id/button_2_0"
             style="@style/TicTacToeButton"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="2dp"
@@ -97,7 +97,7 @@
             app:cornerRadius="0dp"/>
 
         <Button
-            android:id="@+id/button_8"
+            android:id="@+id/button_2_1"
             style="@style/TicTacToeButton"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="2dp"
@@ -106,7 +106,7 @@
             app:cornerRadius="0dp"/>
 
         <Button
-            android:id="@+id/button_9"
+            android:id="@+id/button_2_2"
             style="@style/TicTacToeButton"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="2dp"
