@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private var gridLayout: GridLayout? = null
     private var gameStatus: TextView? = null
+    private var playAgainButton: Button? = null
     private var board = Array(3) { Array(3) { "" } }
     private var currentPlayer = "X"
 
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         gridLayout = findViewById(R.id.gridLayout)
         gameStatus = findViewById(R.id.gameStatus)
+        playAgainButton = findViewById<Button>(R.id.playAgainButton)
 
         // Set click listeners for all buttons in the grid
         for (i in 0 until 3) {
@@ -39,6 +41,7 @@ class MainActivity : AppCompatActivity() {
                 button.setOnClickListener { onCellClicked(i, j, button) }
             }
         }
+        playAgainButton?.setOnClickListener{createNewGame()}
     }
 
     private fun onCellClicked(row: Int, col: Int, button: Button) {
@@ -53,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         if (checkWinner()) {
             gameStatus?.text = "$currentPlayer wins!"
             disableButtons()
+            playAgainButton?.isEnabled = true
             return
         }
 
@@ -60,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         if (isBoardFull()) {
             gameStatus?.text = "It's a draw!"
             disableButtons()
+            playAgainButton?.isEnabled = true
             return
         }
 
@@ -95,6 +100,21 @@ class MainActivity : AppCompatActivity() {
                 val resID = resources.getIdentifier(buttonId, "id", packageName)
                 val button = findViewById<Button>(resID)
                 button.isEnabled = false
+            }
+        }
+    }
+
+    private fun createNewGame() {
+        currentPlayer = "X"
+        playAgainButton?.isEnabled = false
+        for (i in 0 until 3) {
+            for (j in 0 until 3) {
+                val buttonId = "button_${i}_$j"
+                val resID = resources.getIdentifier(buttonId, "id", packageName)
+                val button = findViewById<Button>(resID)
+                board[i][j] = ""
+                button.isEnabled = true
+                button.text = ""
             }
         }
     }
